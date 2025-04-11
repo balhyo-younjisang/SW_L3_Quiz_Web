@@ -78,8 +78,6 @@ function displayProblem() {
             li.textContent = answer;
             li.dataset.index = index;
             li.addEventListener("click", function () {
-                console.log(this.dataset.index);
-                console.log(current.answer);
                 if (parseInt(this.dataset.index) === current.answer) {
                     alert("정답입니다!");
                     currentStatus.correct++;
@@ -111,7 +109,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     hiddenText.classList.remove("hidden");
 
     quizList = await getRandomProblem();
-    console.log(quizList);
+    // console.log(quizList);
 
     if (!quizList || quizList.length === 0 || quizList.error) {
         quizContainer.textContent = "문제 생성에 실패했어요. 잠시 후 새로고침해주세요";
