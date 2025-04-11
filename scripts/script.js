@@ -19,7 +19,7 @@ let currentStatus = {
 }
 
 async function getRandomProblem() {
-    const response = await fetch("http://api.yunjisang.me:8889/query", {
+    const response = await fetch("https://api.yunjisang.me:8889/query", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
