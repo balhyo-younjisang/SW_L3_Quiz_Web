@@ -10,6 +10,28 @@
     <header>
         <h1>SW L3 외부평가 필기 대비 문제은행</h1>
     </header>
-    <main></main>
+    <main>
+        <section class="status">
+            <p id="correct"></p>
+            <p id="incorrect"></p>
+        </section>
+        <div id="quiz-container">
+            <p class="hidden" id="loading">문제를 생성 중이예요...</p>
+            <p id="question"></p>
+            <ol id="choices"></ol>
+            <input type="text" id="answer-input" class="hidden" placeholder="정답을 입력하세요">
+            <button type="button" class="hidden" id="submit">제출</button>
+            <p id="answer"></p>
+            <p id="explain"></p>
+
+        <button id="next-button" class="hidden">다음 문제</button>
+        <button id="new-button" class="hidden">새로운 문제</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; YunJisang 2025 SW L3 외부평가 필기 대비 문제은행</p>
+        <p>이 웹사이트는 SW L3 외부평가 필기 대비를 위한 문제은행입니다.</p>
+    </footer>
 </body>
+<script src="./scripts/script.js" defer></script>
 </html>

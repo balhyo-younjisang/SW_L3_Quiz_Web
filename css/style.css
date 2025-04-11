@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
 }
 
-ul, li {
+ul {
     list-style: none;
 }
 
@@ -38,4 +38,70 @@ header {
 header h1 {
     font-size: 1.2rem;
     font-weight: 700;
+}
+
+footer {
+    width: 100vw;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+}
+
+footer p {
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.status {
+    position: fixed;
+    right: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+#quiz-container {
+    width: 100%;
+    height: calc(100vh - 10rem);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#loading {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#question {
+    margin-bottom: 50px;
+    text-align: justify;
+}
+
+#choices li {
+    font-size: 16px;
+}
+
+#answer {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+#explain {
+    margin-top: 20px;
+    font-size: 16px;
 }
