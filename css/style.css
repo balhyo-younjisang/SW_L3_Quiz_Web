@@ -4,7 +4,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 18px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    padding-bottom: 5rem;
 }
 
 a {
@@ -12,55 +18,48 @@ a {
     color: inherit;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f0f0f0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
-}
-
-ul {
-    list-style: none;
-}
-
 header {
-    width: 100vw;
+    width: 100%;
     height: 6rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #333;
+    background-color: #222;
     color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 700;
 }
 
 footer {
-    width: 100vw;
-    height: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #333;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #222;
     color: #fff;
+    text-align: center;
     position: fixed;
     bottom: 0;
+    left: 0;
 }
 
 footer p {
     font-size: 0.8rem;
-    font-weight: 400;
+    margin: 2px 0;
 }
 
 .status {
     position: fixed;
-    right: 30px;
+    top: 1rem;
+    right: 1rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    z-index: 100;
 }
 
 .hidden {
@@ -68,40 +67,123 @@ footer p {
 }
 
 #quiz-container {
-    width: 100%;
-    height: calc(100vh - 10rem);
+    width: 90%;
     max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 2rem auto;
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
+    min-height: 60vh;
 }
 
 #loading {
-    font-size: 28px;
-    font-weight: bold;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #444;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 #question {
-    margin-bottom: 50px;
-    text-align: justify;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+#choices {
+    margin-bottom: 2rem;
+    padding-left: 1rem;
 }
 
 #choices li {
-    font-size: 16px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    background-color: #eee;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
-#answer {
-    margin-top: 20px;
-    font-size: 16px;
+#choices li:hover {
+    background-color: #d4d4d4;
 }
 
-#explain {
-    margin-top: 20px;
-    font-size: 16px;
+#answer-input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+button {
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    margin: 0.3rem;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#answer, #explain {
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: #444;
+}
+
+@media (max-width: 600px) {
+    #quiz-container {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .status {
+        top: 0.5rem;
+        right: 0.5rem;
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+}
+
+button {
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    margin: 0.3rem;
+    transition: background-color 0.25s ease, transform 0.1s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2);
+}
+
+button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 10px rgba(0, 86, 179, 0.3);
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #004494;
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 86, 179, 0.2);
 }
